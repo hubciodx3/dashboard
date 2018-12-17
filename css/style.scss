@@ -66,14 +66,34 @@ a{
                 height: 36px;
             }
         }
-        
+        .drop_down_list
+        {
+            position: absolute;
+            top: 63px;
+            right: 20px;
+            background-color: #ffffff;
+            max-width: 320px;
+            padding: 10px;
+            border-radius: 0 0 5px 5px;
+            display: none;
+            ul{
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+                text-align: center;
+                li{
+                    line-height: 2;
+                }
+            }
+        }
     }
 }
 .side-bar
 {
-    width: 250px;
-    background: #3b4653;
+    max-width: 250px;
+    width: 20%;
     height: 100vh;
+    background: #3b4653;
     ul
     {
         $element-bcolor: #323c48;
@@ -126,4 +146,14 @@ a{
     padding: 10px 0;
     background: #ffffff;
     color: #303030;
+}
+
+#dashboard-main
+{
+    display: flex;
+}
+
+#page-container
+{
+    padding: 10px;
 }

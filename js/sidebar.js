@@ -1,5 +1,4 @@
 $( document ).ready(function() {
-
     function ResetMenu()
     {
         var activedMenu = $(".category-header.active");
@@ -24,4 +23,18 @@ $( document ).ready(function() {
             link.removeClass('active');
         }
     });
+    var closed = true;
+    $( ".user-image").click(function() {
+        
+        if(closed)
+        {
+            $(this).siblings(".drop_down_list").fadeIn('fast','linear');
+            closed = false;
+        }
+        else
+        {
+            $(this).siblings(".drop_down_list").fadeOut('fast','linear');
+            closed = true;
+        }
+      });
 });
