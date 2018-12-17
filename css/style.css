@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: #303030;
+  font-family: "Montserrat";
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.page-header {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 68px;
+  height: 63px;
+}
+
+.page-header .page-nav .navigation-menu {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.page-header .page-nav .navigation-menu a {
+  border-left: 1px solid #e8e8e8;
+  border-right: 1px solid #e8e8e8;
+  padding: 5px 15px;
+  line-height: 3;
+  color: #1254e0;
+  background: -webkit-linear-gradient(4deg, #8e54e9 0%, #4776e6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.page-header .user-panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 5px 0 5px;
+}
+
+.page-header .user-panel i {
+  background: -webkit-linear-gradient(4deg, #8e54e9 0%, #4776e6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 0 10px 0 10px;
+  line-height: 3;
+}
+
+.page-header .user-panel .user-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.page-header .user-panel .user-image img {
+  border-radius: 100%;
+  width: 36px;
+  height: 36px;
+}
+
+.side-bar {
+  width: 250px;
+  background: #3b4653;
+  height: 100vh;
+}
+
+.side-bar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+}
+
+.side-bar ul .category-header {
+  background: #323c48;
+  height: 57px;
+  line-height: 57px;
+}
+
+.side-bar ul .category-header i {
+  padding: 0 25px;
+  color: #485361;
+}
+
+.side-bar ol {
+  list-style-type: none;
+}
+
+.side-bar ol li::before {
+  content: "\2022";
+  color: red;
+  font-weight: bold;
+  display: inline-block;
+  width: 3em;
+  margin-left: -1em;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,108 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: #303030;
+    font-family: "Montserrat";
+}
+
+a{
+    color: #ffffff;  
+    text-decoration: none;
+}
+
+.page-header
+{
+    background-color: #ffffff;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 68px;
+    height: 63px;
+    .page-nav
+    {
+        .navigation-menu
+        {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            a
+            {
+                $border-color: #e8e8e8;
+                border-left: 1px solid $border-color;
+                border-right: 1px solid $border-color;
+                padding: 5px 15px;
+                line-height: 3;
+                color: #1254e0;
+                background: -webkit-linear-gradient( 4deg, rgb(142,84,233) 0%, rgb(71,118,230) 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;               
+            }
+        }
+    }
+    .user-panel 
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 5px 0 5px;
+        i{
+            background: -webkit-linear-gradient( 4deg, rgb(142,84,233) 0%, rgb(71,118,230) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            padding: 0 10px 0 10px;
+            line-height: 3;
+        }
+        .user-image
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img
+            {
+                border-radius: 100%;
+                width: 36px;
+                height: 36px;
+            }
+        }
+        
+    }
+}
+.side-bar
+{
+    width: 250px;
+    background: #3b4653;
+    height: 100vh;
+    ul
+    {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        color: #ffffff;
+        .category-header
+        {
+            $element-height: 57px;
+            background: #323c48;
+            height: $element-height;
+            line-height: $element-height;
+            i{
+                padding: 0 25px;
+                color: #485361;
+            }
+        }
+    }
+    ol
+    {
+        list-style-type: none;
+        li::before
+        {
+            content: "\2022";
+            color: red;
+            font-weight: bold;
+            display: inline-block; 
+            width: 3em;
+            margin-left: -1em;
+        }
+    }
+}
