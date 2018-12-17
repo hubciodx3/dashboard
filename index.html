@@ -8,6 +8,27 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $( document ).ready(function() {
+            var closed = true;
+
+            $( ".category-header" ).click(function() {
+                if(closed)
+                {
+                    $(".category-button ol" ).fadeIn('fast','linear');
+                    $(".category-button .category-header").addClass('active');
+                    closed = false;
+                }
+                else
+                {
+                    $(".category-button ol" ).fadeOut('fast','linear');
+                    $(".category-button .category-header").removeClass('active');
+                    closed = true;
+                }
+            });
+        });
+    </script>
 </head>
 <body>
     <header class="page-header">
@@ -25,8 +46,8 @@
         </section>
     </header>
     <aside id="side-bar" class="side-bar">
-        <ul>
-            <li class="category-header"><i class="fas fa-users"></i>User type</li>
+        <ul class="category-button">
+            <li class="category-header" id="_1"><i class="fas fa-users"></i>User type</li>
             <ol>
                 <li>Admin</li>
                 <li>Reception</li>
@@ -35,7 +56,7 @@
             </ol>
         </ul>
         <ul>
-            <li class="category-header"><i class="fas fa-archive"></i>Appointments</li>
+            <li class="category-header" id="_2"><i class="fas fa-archive"></i>Appointments</li>
             <ol>
                 <li>Admin</li>
                 <li>Reception</li>
@@ -44,7 +65,7 @@
             </ol>
         </ul>
         <ul>
-            <li class="category-header"><i class="fas fa-dollar-sign"></i>Payments</li>
+            <li class="category-header" id="_3"><i class="fas fa-dollar-sign"></i>Payments</li>
             <ol>
                 <li>Admin</li>
                 <li>Reception</li>
@@ -53,7 +74,7 @@
             </ol>
         </ul>
         <ul>
-            <li class="category-header"><i class="fas fa-heart"></i>Customers</li>
+            <li class="category-header" id="_4"><i class="fas fa-heart"></i>Customers</li>
             <ol>
                 <li>Admin</li>
                 <li>Reception</li>

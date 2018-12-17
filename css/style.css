@@ -96,7 +96,7 @@ a {
 }
 
 .side-bar ul .category-header {
-  background: #323c48;
+  background-color: #323c48;
   height: 57px;
   line-height: 57px;
 }
@@ -106,16 +106,28 @@ a {
   color: #485361;
 }
 
+.side-bar ul .category-header:hover, .side-bar ul .category-header.active {
+  border-right: 3px solid #8359e9;
+  background-color: #282f39;
+}
+
 .side-bar ol {
   list-style-type: none;
+  padding-left: 25px;
+  display: none;
+}
+
+.side-bar ol li {
+  line-height: 2.5;
 }
 
 .side-bar ol li::before {
   content: "\2022";
-  color: red;
+  color: #8359e9;
   font-weight: bold;
   display: inline-block;
-  width: 3em;
-  margin-left: -1em;
+  width: 62px;
+  text-align: center;
+  margin-left: -1.3em;
 }
 /*# sourceMappingURL=style.css.map */

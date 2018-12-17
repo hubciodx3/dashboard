@@ -76,6 +76,7 @@ a{
     height: 100vh;
     ul
     {
+        $element-bcolor: #323c48;
         list-style-type: none;
         margin: 0;
         padding: 0;
@@ -83,26 +84,38 @@ a{
         .category-header
         {
             $element-height: 57px;
-            background: #323c48;
+            background-color: $element-bcolor;
             height: $element-height;
             line-height: $element-height;
             i{
                 padding: 0 25px;
                 color: #485361;
             }
+            &:hover, &.active
+            {
+                border-right: 3px solid #8359e9;
+                background-color: darken($element-bcolor,5%);
+            }
         }
     }
     ol
     {
         list-style-type: none;
-        li::before
+        padding-left: 25px;
+        display: none;
+        li
         {
-            content: "\2022";
-            color: red;
-            font-weight: bold;
-            display: inline-block; 
-            width: 3em;
-            margin-left: -1em;
+            line-height: 2.5;
+            &::before
+            {
+                content: "\2022";
+                color: #8359e9;
+                font-weight: bold;
+                display: inline-block; 
+                width: 62px;
+                text-align: center;
+                margin-left: -1.3em;
+            }
         }
     }
 }
