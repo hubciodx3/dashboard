@@ -6,27 +6,51 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
 </head>
 <body>
-    <header class="page-header">
-        <nav class="page-nav">
+    <header class="dashboard-header">
+        <nav class="dashboard-nav">
             <ul class="navigation-menu">
-                <li><a href="#">Accountant</a></li>
+                <li><a href="#">Administrator</a></li>
+                <li><a href="#">Marek Kozłowski</a></li>
             </ul>
         </nav>
         <section class="user-panel">
-            <i class="far fa-bell"></i>
-            <i class="fas fa-chevron-down"></i>
+            <i class="far fa-bell" id="notification-button"></i>
             <div class="user-image">
                 <img src="image/user.png" alt="">
             </div>
-            <div class="drop_down_list">
-            <ul>
-                <li>Edycja profilu</li>
-                <li>Wyloguj się</li>
-            </ul>
+            <div class="dropdown_list-user">
+                <div class="account-info">
+                    <img src="image/user.png" alt="">
+                    <ul>
+                        <li class="name">Marek Kozłowski</li>
+                        <li class="group">Administrator</li>
+                        <li class="button">Ustawienia konta</li>
+                    </ul>
+                </div>
+                <div class="logout">
+                    <button class="button">Wyloguj się</button>
+                </div>
+            </div>
+            <div class="dropdown_list-notifications">
+                <header class="dropdown_list-header">
+                    Powiadomienia
+                </header>
+                <section class="notifications">
+                    <ul>
+                        <li>
+                            <div class="message">Rozważ zmianę hasła do panelu administratora</div>
+                            <div class="date">16 gru 2018</div>
+                        </li>
+                        <li>
+                            <div class="message">Zbliża się termin opłacenia hostingu</div>
+                            <div class="date">16 lis 2018</div>
+                        </li>
+                    </ul>
+                </section>
             </div>
         </section>
     </header>

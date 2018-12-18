@@ -23,18 +23,32 @@ $( document ).ready(function() {
             link.removeClass('active');
         }
     });
-    var closed = true;
+
     $( ".user-image").click(function() {
-        
-        if(closed)
+        var link = $(this);
+        if(!$(this).hasClass("active"))
         {
-            $(this).siblings(".drop_down_list").fadeIn('fast','linear');
-            closed = false;
+            link.siblings(".dropdown_list-user").fadeIn('fast','linear');
+            link.addClass('active');
         }
         else
         {
-            $(this).siblings(".drop_down_list").fadeOut('fast','linear');
-            closed = true;
+            link.siblings(".dropdown_list-user").fadeOut('fast','linear');
+            link.removeClass('active');
         }
-      });
+    });
+
+    $( "#notification-button").click(function() {
+        var link = $(this);
+        if(!$(this).hasClass("active"))
+        {
+            link.siblings(".dropdown_list-notifications").fadeIn('fast','linear');
+            link.addClass('active');
+        }
+        else
+        {
+            link.siblings(".dropdown_list-notifications").fadeOut('fast','linear');
+            link.removeClass('active');
+        }
+    });
 });

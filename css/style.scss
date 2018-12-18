@@ -1,9 +1,8 @@
-
+/* Main CSS */
 body{
     margin: 0;
     padding: 0;
     border: 0;
-    background: #303030;
     font-family: "Montserrat";
 }
 
@@ -12,7 +11,14 @@ a{
     text-decoration: none;
 }
 
-.page-header
+button
+{
+    background-color: #00000000;
+    border:0;
+}
+
+/* Main CSS */
+.dashboard-header
 {
     background-color: #ffffff;
     display: flex;
@@ -20,24 +26,29 @@ a{
     align-items: center;
     padding-right: 68px;
     height: 63px;
-    .page-nav
+    .dashboard-nav
     {
         .navigation-menu
         {
             padding: 0;
             margin: 0;
             list-style-type: none;
-            a
-            {
+            display: flex;
+            li{
                 $border-color: #e8e8e8;
-                border-left: 1px solid $border-color;
                 border-right: 1px solid $border-color;
-                padding: 5px 15px;
-                line-height: 3;
-                color: #1254e0;
-                background: -webkit-linear-gradient( 4deg, rgb(142,84,233) 0%, rgb(71,118,230) 100%);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;               
+                a
+                {
+                    padding: 5px 15px;
+                    color: #1254e0;
+                    background: -webkit-linear-gradient( 4deg, rgb(142,84,233) 0%, rgb(71,118,230) 100%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent; 
+                    cursor: context-menu;        
+                }
+                &:first-child{
+                    border-left: 1px solid $border-color;
+                } 
             }
         }
     }
@@ -51,38 +62,139 @@ a{
             background: -webkit-linear-gradient( 4deg, rgb(142,84,233) 0%, rgb(71,118,230) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            padding: 0 10px 0 10px;
-            line-height: 3;
+            padding: 10px;
+            &:hover
+            {
+                cursor: pointer;
+            }
         }
         .user-image
         {
             display: flex;
             align-items: center;
             justify-content: center;
+            padding: 10px 0 10px 10px;
             img
             {
                 border-radius: 100%;
                 width: 36px;
                 height: 36px;
+                &:hover
+                {
+                    cursor: pointer;
+                }
+            }
+            &:hover img
+            {
+                background-color: rgba(0,0,0,0.2);
             }
         }
-        .drop_down_list
+        .dropdown_list-user
         {
             position: absolute;
             top: 63px;
-            right: 20px;
+            right: 70px;
             background-color: #ffffff;
             max-width: 320px;
             padding: 10px;
-            border-radius: 0 0 5px 5px;
             display: none;
-            ul{
-                margin: 0;
-                padding: 0;
-                list-style-type: none;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            border-color: rgba(0,0,0,.2);
+            box-shadow: 0 2px 10px rgba(0,0,0,.2);
+            .button
+            {
+                $background-color: #1254e0;
+                background: $background-color;
+                border-radius: 3px;
+                padding: 5px 10px 5px 10px;
+                color: #ffffff;
+                margin-top: 5px;
+                &:hover
+                {
+                    background: darken($background-color, 15%);
+                }
+            }
+            .account-info
+            {
+                display: flex;
+                img
+                {
+                    border-radius: 100%;
+                    max-width: 96px;
+                    max-height: 96px;
+                    margin-right: 20px;
+                }
+                ul{
+                    margin: 0;
+                    padding: 0;
+                    list-style-type: none;
+                    li{
+                        line-height: 2;
+                        font-size: 13px;
+                    }
+                    .name
+                    {
+                        font-weight: 700;
+                        color: #000000;
+                    }
+                    .group
+                    {
+                        color: #666666;
+                    }
+                }
+            }
+            .logout button
+            {
+                width: 100%;
+                padding: 10px;
+                margin-top: 10px;
+            }
+        }
+        .dropdown_list-notifications
+        {
+            position: absolute;
+            top: 63px;
+            right: 125px;
+            background-color: #ffffff;
+            max-width: 320px;
+            padding: 10px;
+            display: none;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            border-color: rgba(0,0,0,.2);
+            box-shadow: 0 2px 10px rgba(0,0,0,.2);
+            
+            .dropdown_list-header
+            {
                 text-align: center;
-                li{
-                    line-height: 2;
+                font-weight: bold;
+                padding: 10px 0 10px 0;
+            }
+
+            .notifications
+            {
+                ul
+                {
+                    list-style-type: none;
+                    padding: 0;
+                    margin: 0;
+                    li
+                    {
+                        border: 1px solid #e8e8e8;
+                        padding: 10px;
+                        margin: 5px 0 5px 0;
+                        cursor: pointer;  
+                        .message
+                        {
+                            font-size: 14px;
+                        }
+                        .date
+                        {
+                            font-size: 13px;
+                            color: #878787;
+                        }
+                    }
                 }
             }
         }
@@ -92,7 +204,7 @@ a{
 {
     max-width: 250px;
     width: 20%;
-    height: 100vh;
+    height: calc(100vh - 102px);
     background: #3b4653;
     ul
     {
